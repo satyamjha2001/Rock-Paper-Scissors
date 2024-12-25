@@ -1,0 +1,161 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle, #fc466b, #3f5efb);
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px; /* Adjusted for comfortable height */
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding is included in total width */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0; /*Removes default margin*/
+}
+
+.game-area {
+  margin-top: 20px;
+  width: 90%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+/* Buttons */
+.root {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.buttons {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.buttons:hover {
+  transform: scale(1.1);
+  background-color: #ffffff22;
+}
+
+/* Score Display */
+.score_parent {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.score {
+  text-align: center;
+  margin: 0 20px;
+}
+
+.image {
+  font-size: 6rem;
+  transition: transform 0.3s;
+}
+
+/* Animations */
+.shake-hand {
+  animation: shakeHand 0.6s infinite ease-in-out;
+}
+
+.my-shake-hand {
+  animation: myShakeHand 0.6s infinite ease-in-out;
+}
+
+@keyframes shakeHand {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(50deg);
+  }
+}
+
+@keyframes myShakeHand {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-50deg);
+  }
+}
+
+/* Result */
+.result {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Reset Button */
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #3f5efb;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.reset-button:hover {
+  background-color: #ff758c;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image {
+    font-size: 4rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image {
+    font-size: 3rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .buttons {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
